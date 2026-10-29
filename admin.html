@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Money Producer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .stat-card {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #198754;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h2>🛠️ Admin Dashboard</h2>
+        <p>ប្រព័ន្ធគ្រប់គ្រង និងតាមដានចំនួនអ្នកចូលមើលវេបសាយ</p>
+        
+        <div class="stat-card">
+            <h3>ចំនួនអ្នកចូលមើលសរុប (Total Views)</h3>
+            <div class="stat-number" id="viewCount">0</div>
+        </div>
+    </div>
+
+    <script>
+        // ទាញយកចំនួន Views មកបង្ហាញ
+        const views = localStorage.getItem('page_views') || 0;
+        document.getElementById('viewCount').innerText = views;
+    </script>
+</body>
+</html>
